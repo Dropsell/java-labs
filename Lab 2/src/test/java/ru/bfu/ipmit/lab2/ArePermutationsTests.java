@@ -13,10 +13,20 @@ public class ArePermutationsTests {
         String secondString = "b1a";
 
         assertTrue(Lab2.arePermutations(firstString, secondString));
+    }
 
-        firstString = "aa";
-        secondString = "ab";
-        assertTrue(!Lab2.arePermutations(firstString,secondString));
+    @Test
+    public void shouldReturnTrueIfStringsArePermutations1() {
+        String firstString = "aa";
+        String secondString = "ab";
+        assertTrue(!Lab2.arePermutations(firstString, secondString));
+    }
+
+    @Test
+    public void shouldReturnTrueIfStringsArePermutations2() {
+        String firstString = "";
+        String secondString = "";
+        assertTrue(Lab2.arePermutations(firstString, secondString));
     }
 
 }
